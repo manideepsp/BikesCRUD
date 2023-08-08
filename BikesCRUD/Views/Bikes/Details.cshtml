@@ -1,0 +1,42 @@
+﻿@model BikesCRUD.Models.Bike
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bike</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BikeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BikeName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BikeType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BikeType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BikeColour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BikeColour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BikeDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BikeDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.BikeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
